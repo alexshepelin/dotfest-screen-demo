@@ -1,0 +1,134 @@
+
+body {
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    --brand-color: #3FAAE6;
+    --brand-light-color: #ECF7FC;
+    --animation-time: 4s;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.brand-element {
+    fill: var(--brand-color);
+    animation: movedown var(--animation-time)  infinite;
+}
+
+.sq-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+@keyframes movedown {
+    0% {
+        margin-top: 0;
+    }
+    25% {
+        margin-top: 250px;
+        margin-left: 0;
+    }
+    45% {
+        margin-left: 100px;
+        margin-top: 250px;
+        transform: rotate(0deg);
+    }
+    55% {
+        margin-left: 100px;
+        margin-top: 250px;
+        transform: rotate(90deg);
+    }
+    72% {
+        margin-top:0;
+        margin-left:100px;
+        transform: rotate(90deg);
+    }
+    95% {
+        transform: rotate(90deg);
+        margin-left:0;
+    }
+    100% {
+        margin-left:0;
+        transform: rotate(0deg);
+    }
+}
+
+
+.sq {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background: var(--brand-color);
+    position: fixed;
+    opacity: 0;
+    transition: margin-top 5s;
+}
+
+
+.sq2hor {
+    width: 120px;
+}
+
+.sq2vert {
+    height:120px;
+}
+
+
+.heading, .logofestival{
+    position: fixed;
+    left:15%;
+}
+.heading {
+    width: 600px;
+    bottom:15%;
+}
+
+.headingtitle {
+    font-size: 60px;
+    font-weight: 800;
+}
+.headingdescr {
+    font-size:26px;
+    line-height: 1.5em;
+    padding-top: 20px;
+}
+
+.logofestival {
+    top: 15%;
+    width: 100px;
+}
+
+.back-pattern {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.back-pattern-image {
+
+    fill: var(--brand-light-color);
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
+.rotate-270 {
+    transform: rotate(270deg);
+}
+
+.image-event {
+    position: absolute;
+    right:20%;
+    top:15%;
+}
