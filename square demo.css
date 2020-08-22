@@ -15,7 +15,7 @@ body {
   top: 10px;
 }
 .container:last-of-type {
-  animation: moveblock 36s ease-in-out infinite;
+  animation: moveblock 66s ease-in-out infinite;
 }
 @keyframes moveblock {
   0%, 87.5%, 100% {
@@ -42,7 +42,7 @@ body {
   width: 1em;
   height: 1em;
   background: linear-gradient(135deg, #3FAAE6 60%, #6cbeec 100%);
-  animation: move 24s ease-in-out infinite;
+  animation: move 44s ease-in-out infinite;
   transform-style: preserve-3d;
 }
 .cube::before, .cube::after {
@@ -57,29 +57,32 @@ body {
   background: linear-gradient(0deg, #2b355e 0%, #1674a9 100%);
   transform-origin: 100% 100%;
   transform: rotateY(-90deg);
+  border-right: solid #99d2f2 2px;
 }
 .cube::after {
   background: #99d2f2;
   transform-origin: 0 100%;
   transform: rotateX(90deg);
+  border-right: solid #c6e6f8 2px;
+  border-bottom: solid #c6e6f8 2px;
 }
 .cube:nth-of-type(1) {
-  animation-delay: -140s;
+  animation-delay: -256.6666666667s;
 }
 .cube:nth-of-type(2) {
-  animation-delay: -136s;
+  animation-delay: -249.3333333333s;
 }
 .cube:nth-of-type(3) {
-  animation-delay: -132s;
+  animation-delay: -242s;
 }
 .cube:nth-of-type(4) {
-  animation-delay: -128s;
+  animation-delay: -234.6666666667s;
 }
 .cube:nth-of-type(5) {
-  animation-delay: -124s;
+  animation-delay: -227.3333333333s;
 }
 .cube:nth-of-type(6) {
-  animation-delay: -120s;
+  animation-delay: -220s;
 }
 @keyframes move {
   0%, 100% {
@@ -141,6 +144,11 @@ body {
   font-size: 600px;
   transform-style: preserve-3d;
   transform: rotateX(60deg) rotateZ(45deg);
+  /*&:hover {
+    transform: rotateX(0deg) rotateZ(0deg) scaleX(10) scaleY(10) translateX(0%) translateY(-50%);
+    transition: 10s;
+
+  }*/
 }
 
 .heading, .logofestival {
