@@ -4,6 +4,7 @@ $ani-dur: 44s;
 $brand-color: #3FAAE6;
 $brand-color-dark: #4B5DA4;
 $size: 600px;
+$brand-error: red;
 
 //  $size: 800px;
 
@@ -53,12 +54,10 @@ background: darken($brand-color-dark, 20%);
 
 
 .cube {
- // position: absolute;
+  //position: absolute;
   width: 1em;
   height: 1em;
- // background: $brand-color; //linear-gradient(90deg, $brand-color-dark 0%, $brand-color 100%);
   background: linear-gradient(135deg, $brand-color 60%, lighten($brand-color,10%) 100%);
-
   animation: move $ani-dur ease-in-out infinite;
   transform-style: preserve-3d;
 
@@ -77,11 +76,11 @@ background: darken($brand-color-dark, 20%);
 
   &::after {
   //  background: linear-gradient(90deg, lighten($brand-color-dark, 20%) 0%, lighten($brand-color, 20%) 100%); //lighten($brand-color, 20%);
-    background: lighten($brand-color, 20%);
+    background: lighten($brand-color, 15%);
     transform-origin: 0 100%;
     transform: rotateX(90deg);
-    border-right: solid lighten($brand-color,30%) 2px;
-    border-bottom: solid lighten($brand-color,30%) 2px;
+    border-right: solid lighten($brand-color,20%) 2px;
+    border-bottom: solid lighten($brand-color,35%) 1px;
   }
 
   @for $i from 1 through 6 {
@@ -89,7 +88,6 @@ background: darken($brand-color-dark, 20%);
       animation-delay: $ani-dur * ($i / 6 - 6);
     }
   }
-
 
   @keyframes move {
     0%,
@@ -102,23 +100,45 @@ background: darken($brand-color-dark, 20%);
     75%   { transform: translate3d(0em, 1.0em, 0.04em); }
     82%  { transform: translate3d(1em, 1.01em, 0.02em); }
   }
-
-
-  @keyframes move3 {
-    0%,
-    100%  { transform: translate(1.01em, 0em);}
-    12.5% { transform: translate(2.01em, 0em); }
-    25%   { transform: translate(2em, 1em); }
-    37.5%,
-    50%   { transform: translate(1.99em, 2.01em); }
-    62.5% { transform: translate(0em, 2.0em); }
-    75%   { transform: translate(0em, 1.0em); }
-    82%  { transform: translate(1em, 1.01em); }
-  }
-
-
 }
 
+
+.redbox {
+  background: $brand-error;
+  transform: translate3d(1.5em, 0.52em, 0.20em);
+  animation: scalemeto 2s ease-in-out infinite;
+  animation-delay: 0s !important;
+
+  @keyframes scalemeto {
+    0%,
+    100% {transform: translate3d(1.5em, 0.52em, 0.20em) scale3d(0.99,0.99,0.99);}
+    15% {transform: translate3d(1.5em, 0.72em, 0.20em) scale3d(1.01,1.01,1.01) rotate(0deg);}
+  }
+
+  &::after {
+    background: darken($brand-error, 20%);
+    border-right: solid lighten($brand-error,20%) 2px;
+    border-bottom: solid lighten($brand-error,35%) 1px;
+  }
+  &::before {
+    background: darken($brand-error, 30%);
+    border-right: solid lighten($brand-error,20%) 2px;
+  }
+}
+
+.bluebox {
+  transform: translate3d(1.5em, 0.52em, 0.20em);
+  animation: scalemeblue 2s ease-in-out infinite;
+  animation-delay: 0s !important;
+
+  @keyframes scalemeblue {
+    0%,
+    100% {transform: translate3d(1.5em, 0.695em, 0.20em) scale3d(0.99,0.99,0.99);}
+    10% {transform: translate3d(1.5em, 0.695em, 0.20em) scale3d(0.99,0.99,0.99);}
+    30% {transform: translate3d(1.5em, 1.22em, 0.20em) scale3d(1.01,1.01,1.01) rotate(0deg);}
+  }
+
+}
 
 
 .box {
@@ -130,13 +150,6 @@ background: darken($brand-color-dark, 20%);
   font-size: $size;
   transform-style: preserve-3d;
   transform: rotateX(60deg) rotateZ(45deg);
-
-  /*&:hover {
-    transform: rotateX(0deg) rotateZ(0deg) scaleX(10) scaleY(10) translateX(0%) translateY(-50%);
-    transition: 10s;
-
-  }*/
-
 }
 
 
@@ -151,7 +164,7 @@ background: darken($brand-color-dark, 20%);
   left:15%;
 }
 .heading {
-  width: 600px;
+  width: 800px;
   bottom:15%;
 }
 

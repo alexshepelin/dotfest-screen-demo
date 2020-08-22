@@ -60,11 +60,11 @@ body {
   border-right: solid #99d2f2 2px;
 }
 .cube::after {
-  background: #99d2f2;
+  background: #83c8ef;
   transform-origin: 0 100%;
   transform: rotateX(90deg);
-  border-right: solid #c6e6f8 2px;
-  border-bottom: solid #c6e6f8 2px;
+  border-right: solid #99d2f2 2px;
+  border-bottom: solid #ddf0fb 1px;
 }
 .cube:nth-of-type(1) {
   animation-delay: -256.6666666667s;
@@ -107,27 +107,45 @@ body {
     transform: translate3d(1em, 1.01em, 0.02em);
   }
 }
-@keyframes move3 {
+
+.redbox {
+  background: red;
+  transform: translate3d(1.5em, 0.52em, 0.2em);
+  animation: scalemeto 2s ease-in-out infinite;
+  animation-delay: 0s !important;
+}
+@keyframes scalemeto {
   0%, 100% {
-    transform: translate(1.01em, 0em);
+    transform: translate3d(1.5em, 0.52em, 0.2em) scale3d(0.99, 0.99, 0.99);
   }
-  12.5% {
-    transform: translate(2.01em, 0em);
+  15% {
+    transform: translate3d(1.5em, 0.72em, 0.2em) scale3d(1.01, 1.01, 1.01) rotate(0deg);
   }
-  25% {
-    transform: translate(2em, 1em);
+}
+.redbox::after {
+  background: #990000;
+  border-right: solid #ff6666 2px;
+  border-bottom: solid #ffb3b3 1px;
+}
+.redbox::before {
+  background: #660000;
+  border-right: solid #ff6666 2px;
+}
+
+.bluebox {
+  transform: translate3d(1.5em, 0.52em, 0.2em);
+  animation: scalemeblue 2s ease-in-out infinite;
+  animation-delay: 0s !important;
+}
+@keyframes scalemeblue {
+  0%, 100% {
+    transform: translate3d(1.5em, 0.695em, 0.2em) scale3d(0.99, 0.99, 0.99);
   }
-  37.5%, 50% {
-    transform: translate(1.99em, 2.01em);
+  10% {
+    transform: translate3d(1.5em, 0.695em, 0.2em) scale3d(0.99, 0.99, 0.99);
   }
-  62.5% {
-    transform: translate(0em, 2em);
-  }
-  75% {
-    transform: translate(0em, 1em);
-  }
-  82% {
-    transform: translate(1em, 1.01em);
+  30% {
+    transform: translate3d(1.5em, 1.22em, 0.2em) scale3d(1.01, 1.01, 1.01) rotate(0deg);
   }
 }
 
@@ -144,11 +162,6 @@ body {
   font-size: 600px;
   transform-style: preserve-3d;
   transform: rotateX(60deg) rotateZ(45deg);
-  /*&:hover {
-    transform: rotateX(0deg) rotateZ(0deg) scaleX(10) scaleY(10) translateX(0%) translateY(-50%);
-    transition: 10s;
-
-  }*/
 }
 
 .heading, .logofestival {
@@ -157,7 +170,7 @@ body {
 }
 
 .heading {
-  width: 600px;
+  width: 800px;
   bottom: 15%;
 }
 
