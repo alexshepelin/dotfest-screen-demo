@@ -12,6 +12,7 @@ body {
     height: 100%;
     display: flex;
     position: relative;
+    transform-style: preserve-3d;
 }
 
 .brand-element {
@@ -25,7 +26,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+
+    transform-style: preserve-3d;
+
+
 }
 
 @keyframes movedown {
@@ -65,16 +69,18 @@ body {
 .sq {
     width: 60px;
     height: 60px;
-    display: block;
     background: var(--brand-color);
     position: fixed;
     opacity: 0;
-    transition: margin-top 5s;
+
 }
+
+
 
 
 .sq2hor {
     width: 120px;
+
 }
 
 .sq2vert {
@@ -118,7 +124,7 @@ body {
 }
 
 .rotate-90 {
-    transform: rotate(90deg);
+    transform: rotateX(90deg);
 }
 .rotate-180 {
     transform: rotate(180deg);
@@ -127,8 +133,16 @@ body {
     transform: rotate(270deg);
 }
 
+
+
 .image-event {
     position: absolute;
     right:20%;
     top:15%;
 }
+
+
+
+
+
+
