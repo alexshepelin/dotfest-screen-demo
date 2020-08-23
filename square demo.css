@@ -22,7 +22,7 @@ body {
     transform: translate3d(0em, 0em, 0em);
   }
   12.5% {
-    transform: translate3d(0em, 40em, 0em);
+    transform: translate3d(40em, 40em, 0em);
   }
   25% {
     transform: translate3d(0em, 40em, 0em);
@@ -31,7 +31,7 @@ body {
     transform: translate3d(0em, -20em, 0em);
   }
   62.5% {
-    transform: translate3d(0em, -20em, 0em);
+    transform: translate3d(40em, -20em, 0em);
   }
   75% {
     transform: translate3d(0em, 40em, 0em);

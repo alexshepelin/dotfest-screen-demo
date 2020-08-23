@@ -1,8 +1,17 @@
 $c-white: #fff;
 $c-black: #000;
 $ani-dur: 44s;
-$brand-color: #3FAAE6;
-$brand-color-dark: #4B5DA4;
+$brand-color: #3FAAE6; //dot
+//$brand-color: #e9b117;   //php
+//$brand-color: #34AB9B;   //devops
+//$brand-color: #D5559A;   //apps
+
+$brand-color-dark: #4B5DA4; //dot
+//$brand-color-dark: #ae5386; //php
+//$brand-color-dark: #634b9c; //devops
+//$brand-color-dark: #66489f; //apps
+
+
 $size: 600px;
 $brand-error: red;
 
@@ -35,7 +44,6 @@ background: darken($brand-color-dark, 20%);
   top: 10px;
 
 &:last-of-type {
-
   animation: moveblock $ani-dur*1.5 ease-in-out infinite;
 }
 
@@ -43,11 +51,11 @@ background: darken($brand-color-dark, 20%);
     0%,
     87.5%,
     100%  { transform: translate3d(0em, 0em, 0em); }
-    12.5% { transform: translate3d(0em, 40em, 0em); }
+    12.5% { transform: translate3d(40em, 40em, 0em); }
     25%   { transform: translate3d(0em, 40em, 0em); }
     37.5%,
     50%   { transform: translate3d(0em, -20em, 0em); }
-    62.5% { transform: translate3d(0em, -20em, 0em); }
+    62.5% { transform: translate3d(40em, -20em, 0em); }
     75%   { transform: translate3d(0em, 40em, 0em); }
        }
 }
