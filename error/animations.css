@@ -1,0 +1,132 @@
+body {
+  background: #2b355e;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 1vw;
+}
+
+a {
+  font-size: 1em;
+  color: #99d2f2 !important;
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.heading, .logofestival {
+  position: fixed;
+  left: 15%;
+}
+
+.heading {
+  width: 1200px;
+  bottom: 15%;
+}
+
+.headingtitle {
+  font-size: 4em;
+  font-weight: 800;
+}
+
+.headingdescr {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  padding-top: 20px;
+}
+
+.logofestival {
+  top: 15%;
+  width: 200px;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 3em;
+  height: 2em;
+  top: -50vh;
+  margin: 0;
+  font-size: 40vw;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateZ(45deg);
+}
+
+.cube {
+  width: 1em;
+  height: 1em;
+  background: linear-gradient(135deg, #3FAAE6 60%, #6cbeec 100%);
+  transform-style: preserve-3d;
+}
+.cube::before, .cube::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.cube::before {
+  background: linear-gradient(0deg, #2b355e 0%, #1674a9 100%);
+  transform-origin: 100% 100%;
+  transform: rotateY(-90deg);
+  border-right: solid #99d2f2 2px;
+}
+.cube::after {
+  background: #83c8ef;
+  transform-origin: 0 100%;
+  transform: rotateX(90deg);
+  border-right: solid #99d2f2 2px;
+  border-bottom: solid #ddf0fb 1px;
+}
+
+.redbox {
+  background: red;
+  transform: translate3d(1.5em, 0.52em, 0.2em);
+  animation: scalemeto 2s ease-in-out infinite;
+  animation-delay: 0s !important;
+}
+.redbox::after {
+  background: #990000;
+  border-right: solid #ff6666 2px;
+  border-bottom: solid #ffb3b3 1px;
+}
+.redbox::before {
+  background: #660000;
+  border-right: solid #ff6666 2px;
+}
+@keyframes scalemeto {
+  0%, 100% {
+    transform: translate3d(1.5em, 0.52em, 0.2em) scale3d(0.99, 0.99, 0.99);
+  }
+  15% {
+    transform: translate3d(1.5em, 0.72em, 0.2em) scale3d(1.01, 1.01, 1.01);
+  }
+}
+
+.bluebox {
+  transform: translate3d(1.5em, 0.52em, 0.2em);
+  animation: scalemeblue 2s ease-in-out infinite;
+}
+@keyframes scalemeblue {
+  0%, 100% {
+    transform: translate3d(1.5em, 0.695em, 0.2em) scale3d(0.99, 0.99, 0.99);
+  }
+  10% {
+    transform: translate3d(1.5em, 0.695em, 0.2em) scale3d(0.99, 0.99, 0.99);
+  }
+  30% {
+    transform: translate3d(1.5em, 1.22em, 0.2em) scale3d(1.01, 1.01, 1.01);
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */

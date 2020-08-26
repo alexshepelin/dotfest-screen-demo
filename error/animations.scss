@@ -1,0 +1,89 @@
+@import "../static-elements.scss";
+
+$ani-dur: 2s;
+$size: 40vw;
+
+.box {
+  @include fill;
+  width: 3em;
+  height: 2em;
+  top:-50vh;
+  margin: 0;
+  font-size: $size;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateZ(45deg);
+}
+
+.cube {
+  //position: absolute;
+  width: 1em;
+  height: 1em;
+  background: linear-gradient(135deg, $brand-color 60%, lighten($brand-color,10%) 100%);
+  transform-style: preserve-3d;
+
+  &::before,
+  &::after {
+    content: '';
+    @include fill;
+  }
+
+  &::before {
+    background: linear-gradient(0deg, darken($brand-color-dark, 20%) 0%, darken($brand-color, 20%) 100%);
+    transform-origin: 100% 100%;
+    transform: rotateY(-90deg);
+    border-right: solid lighten($brand-color,20%) 2px;
+  }
+
+  &::after {
+  background: lighten($brand-color, 15%);
+    transform-origin: 0 100%;
+    transform: rotateX(90deg);
+    border-right: solid lighten($brand-color,20%) 2px;
+    border-bottom: solid lighten($brand-color,35%) 1px;
+  }
+}
+
+
+.redbox {
+  background: $brand-error;
+  transform: translate3d(1.5em, 0.52em, 0.20em);
+  animation: scalemeto $ani-dur ease-in-out infinite;
+  animation-delay: 0s !important;
+
+  &::after {
+    background: darken($brand-error, 20%);
+    border-right: solid lighten($brand-error,20%) 2px;
+    border-bottom: solid lighten($brand-error,35%) 1px;
+  }
+  &::before {
+    background: darken($brand-error, 30%);
+    border-right: solid lighten($brand-error,20%) 2px;
+  }
+
+  @keyframes scalemeto {
+    0%,
+    100% {transform: translate3d(1.5em, 0.52em, 0.20em) scale3d(0.99,0.99,0.99);}
+    15% {transform: translate3d(1.5em, 0.72em, 0.20em) scale3d(1.01,1.01,1.01);}
+  }
+
+}
+
+.bluebox {
+  transform: translate3d(1.5em, 0.52em, 0.20em);
+  animation: scalemeblue $ani-dur ease-in-out infinite;
+
+  @keyframes scalemeblue {
+    0%,
+    100% {transform: translate3d(1.5em, 0.695em, 0.20em) scale3d(0.99,0.99,0.99);}
+    10% {transform: translate3d(1.5em, 0.695em, 0.20em) scale3d(0.99,0.99,0.99);}
+    30% {transform: translate3d(1.5em, 1.22em, 0.20em) scale3d(1.01,1.01,1.01);}
+  }
+
+}
+
+
+
+
+
+
+

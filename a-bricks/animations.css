@@ -2,6 +2,12 @@ body {
   background: #2b355e;
   font-family: "Inter", sans-serif;
   color: white;
+  font-size: 1vw;
+}
+
+a {
+  font-size: 1em;
+  color: #99d2f2 !important;
 }
 
 .content {
@@ -12,6 +18,32 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.heading, .logofestival {
+  position: fixed;
+  left: 15%;
+}
+
+.heading {
+  width: 1200px;
+  bottom: 15%;
+}
+
+.headingtitle {
+  font-size: 4em;
+  font-weight: 800;
+}
+
+.headingdescr {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  padding-top: 20px;
+}
+
+.logofestival {
+  top: 15%;
+  width: 200px;
 }
 
 .cube {
@@ -42,66 +74,104 @@ body {
   border-right: solid #99d2f2 2px;
   border-bottom: solid #ddf0fb 1px;
 }
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 4em;
+  height: 3em;
+  top: -20vh;
+  font-size: 40vw;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateZ(45deg);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .cube:nth-of-type(1) {
   animation-delay: -877.8s;
 }
+
 .cube:nth-of-type(2) {
   animation-delay: -875.6s;
 }
+
 .cube:nth-of-type(3) {
   animation-delay: -873.4s;
 }
+
 .cube:nth-of-type(4) {
   animation-delay: -871.2s;
 }
+
 .cube:nth-of-type(5) {
   animation-delay: -869s;
 }
+
 .cube:nth-of-type(6) {
   animation-delay: -866.8s;
 }
+
 .cube:nth-of-type(7) {
   animation-delay: -864.6s;
 }
+
 .cube:nth-of-type(8) {
   animation-delay: -862.4s;
 }
+
 .cube:nth-of-type(9) {
   animation-delay: -860.2s;
 }
+
 .cube:nth-of-type(10) {
   animation-delay: -858s;
 }
+
 .cube:nth-of-type(11) {
   animation-delay: -855.8s;
 }
+
 .cube:nth-of-type(12) {
   animation-delay: -853.6s;
 }
+
 .cube:nth-of-type(13) {
   animation-delay: -851.4s;
 }
+
 .cube:nth-of-type(14) {
   animation-delay: -849.2s;
 }
+
 .cube:nth-of-type(15) {
   animation-delay: -847s;
 }
+
 .cube:nth-of-type(16) {
   animation-delay: -844.8s;
 }
+
 .cube:nth-of-type(17) {
   animation-delay: -842.6s;
 }
+
 .cube:nth-of-type(18) {
   animation-delay: -840.4s;
 }
+
 .cube:nth-of-type(19) {
   animation-delay: -838.2s;
 }
+
 .cube:nth-of-type(20) {
   animation-delay: -836s;
 }
+
 @keyframes move {
   0%, 100% {
     transform: translate3d(0.01em, 1.01em, 0.9em);
@@ -149,47 +219,4 @@ body {
   }
 }
 
-.box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 4em;
-  height: 3em;
-  top: -20vh;
-  font-size: 40vw;
-  transform-style: preserve-3d;
-  transform: rotateX(60deg) rotateZ(45deg);
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.heading, .logofestival {
-  position: fixed;
-  left: 15%;
-}
-
-.heading {
-  width: 1200px;
-  bottom: 15%;
-}
-
-.headingtitle {
-  font-size: 5em;
-  font-weight: 800;
-}
-
-.headingdescr {
-  font-size: 1.6em;
-  line-height: 1.4em;
-  padding-top: 20px;
-}
-
-.logofestival {
-  top: 15%;
-  width: 200px;
-}
-
-/*# sourceMappingURL=boxes-demo.css.map */
+/*# sourceMappingURL=animations.css.map */

@@ -1,0 +1,66 @@
+$brand-error: red;
+$brand-color: #3FAAE6; //dot
+//$brand-color: #e9b117;   //php
+//$brand-color: #34AB9B;   //devops
+//$brand-color: #D5559A;   //apps
+
+$brand-color-dark: #4B5DA4; //dot
+//$brand-color-dark: #ae5386; //php
+//$brand-color-dark: #634b9c; //devops
+//$brand-color-dark: #66489f; //apps
+
+$font: 1vw;
+
+
+body {
+  background: darken($brand-color-dark, 20%);
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: $font;
+}
+
+a {
+    font-size: 1.0em;
+   color: #99d2f2 !important;
+  }
+
+
+@mixin fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  @include fill;
+}
+
+.heading, .logofestival{
+  position: fixed;
+  left:15%;
+
+}
+.heading {
+  width: 1200px;
+  bottom:15%;
+}
+
+.headingtitle {
+  font-size: 4em;
+  font-weight: 800;
+}
+.headingdescr {
+  font-size:1.6em;
+  line-height: 1.4em;
+  padding-top: 20px;
+}
+
+.logofestival {
+  top: 15%;
+  width: 200px;
+}
+

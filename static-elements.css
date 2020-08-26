@@ -1,0 +1,49 @@
+body {
+  background: #2b355e;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 1vw;
+}
+
+a {
+  font-size: 1em;
+  color: #99d2f2 !important;
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.heading, .logofestival {
+  position: fixed;
+  left: 15%;
+}
+
+.heading {
+  width: 1200px;
+  bottom: 15%;
+}
+
+.headingtitle {
+  font-size: 4em;
+  font-weight: 800;
+}
+
+.headingdescr {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  padding-top: 20px;
+}
+
+.logofestival {
+  top: 15%;
+  width: 200px;
+}
+
+/*# sourceMappingURL=static-elements.css.map */
