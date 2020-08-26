@@ -26,7 +26,6 @@ a {
 }
 
 .heading {
-  width: 1200px;
   bottom: 15%;
 }
 
@@ -36,9 +35,35 @@ a {
 }
 
 .headingdescr {
-  font-size: 1.6em;
+  font-size: 1.3em;
   line-height: 1.4em;
   padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+.headingdescr div {
+  width: 30%;
+  padding: 20px 0 20px 0;
+  font-size: 1.1rem;
+}
+.headingdescr div:not(:last-of-type):not(:nth-last-of-type(2)) {
+  border-bottom: dashed 1px white;
+}
+.headingdescr div:nth-of-type(2n) {
+  width: 70%;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.avatar {
+  padding-left: 20px;
+  clip-path: url(#mask-7);
 }
 
 .logofestival {

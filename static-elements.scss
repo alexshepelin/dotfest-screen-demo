@@ -45,7 +45,6 @@ a {
 
 }
 .heading {
-  width: 1200px;
   bottom:15%;
 }
 
@@ -54,10 +53,46 @@ a {
   font-weight: 800;
 }
 .headingdescr {
-  font-size:1.6em;
+  font-size:1.3em;
   line-height: 1.4em;
   padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+
+  & div {
+    width: 30%;
+    padding: 20px 0 20px 0;
+    font-size: 1.1rem;
+
+  }
+
+  & div:not(:last-of-type):not(:nth-last-of-type(2)) {
+    border-bottom: dashed 1px white;
+  }
+
+  & div:nth-of-type(2n) {
+ width: 70%;
+  }
+
 }
+
+  .description {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+//    width: 70vw;
+
+  }
+  .avatar {
+    padding-left: 20px;
+    clip-path: url(#mask-7);
+    //width: 40%;
+
+  }
+
+
 
 .logofestival {
   top: 15%;
