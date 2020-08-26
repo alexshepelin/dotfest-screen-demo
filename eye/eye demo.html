@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eye demo</title>
+    <link rel="stylesheet" href="eye styles.css">
+</head>
+<body>
+<div class="rounded">
+    <div class="zrak">
+ <div class="zrak-in">
+     <div class="zrak-in-white"></div>
+ </div>
+    </div>
+</div>
+<div class="demo">текст</div>
+
+<script>
+    let contain = document.querySelector(".zrak");
+    let eye = document.querySelector(".zrak-in-white");
+    document.addEventListener('mousemove', evt => {
+        let x = evt.clientX / innerWidth;
+        let y = evt.clientY / innerHeight;
+       // root.style.setProperty('--mouse-x', x);
+      //  root.style.setProperty('--mouse-y', y);
+        contain.style.transform = 'rotate(' + (x*30-y*30) + 'deg) ';
+       // eye.style.transform = 'scale(' + 1*x + ') translateY(-50%) translateX(-50%)';
+    });
+
+
+    let headercontent = document.querySelector(".demo").textContent;
+    alert(headercontent);
+    document.querySelector(".demo").innerHTML = "<h1 field='title'>"+document.querySelector(".demo").textContent+"</h1>";
+    alert(document.querySelector(".demo").innerHTML);
+</script>
+
+</body>
+</html>
